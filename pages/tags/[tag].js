@@ -2,8 +2,14 @@ import fs from "fs";
 import async from "async";
 import highland from "highland";
 import path from "path";
+import Link from 'next/link'
 
-const Tag = ({data,links}) => <div>{data} contains {links}</div>;
+const Tag = ({data,links}) => <div>{data} contains {links}
+    <hr/>
+    {
+        links.map(item => (<><Link href={'/post/'+item}><a>{item}</a></Link><br/></>))
+    }
+</div>;
 
 export const getStaticPaths = async () => {
     let tagsarr = [];
