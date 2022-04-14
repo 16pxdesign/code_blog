@@ -3,6 +3,9 @@
 # IDE
 .idea
 
+#build
+/temp
+
 # dependencies
 /node_modules
 /.pnp
