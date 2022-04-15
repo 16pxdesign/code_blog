@@ -1,4 +1,9 @@
- <form>
+---
+title: First html article
+description: This is description for fist article
+tags: car, driver, tip
+---
+<form>
           <div class="grid">
             <input type="text" name="firstname" placeholder="First name" aria-label="First name" required>
             <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
