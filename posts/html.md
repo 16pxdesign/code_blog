@@ -16,3 +16,15 @@ tags: car, driver, tip
             </label>
           </fieldset>
         </form>
+
+# Header
+
+```javascript
+ // in _app.js
+import "../styles/global.scss";
+import "prismjs/themes/prism-tomorrow.css";
+
+export default function App({ Component, pageProps }) {
+    return <Component {...pageProps} />;
+}
+```

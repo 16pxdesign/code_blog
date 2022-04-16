@@ -6,3 +6,7 @@ tags: car, driver, tip, cook, diner, pizza
 # AAA
 ---
 ~article.~
+
+```js
+console.log("test")
+```
