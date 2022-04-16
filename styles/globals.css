@@ -14,3 +14,31 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.upper {
+  text-transform: uppercase;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 200px auto;
+  --block-spacing-horizontal: calc(var(--spacing) * 1.75);
+  grid-column-gap: calc(var(--block-spacing-horizontal) * 3);
+  padding-top: calc(var(--block-spacing-vertical) + 3.5rem);
+
+}
+
+summary {
+  list-style-type: none;
+}
+
+summary::after {
+  display: none;
+}
+
+pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
