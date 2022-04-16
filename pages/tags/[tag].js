@@ -7,7 +7,7 @@ import Link from 'next/link'
 const Tag = ({data,links}) => <div>{data} contains {links}
     <hr/>
     {
-        links.map(item => (<><Link href={'/post/'+item}><a>{item}</a></Link><br/></>))
+        links.map(item => (<div key={item}><Link href={'/post/'+item}><a>{item}</a></Link><br/></div>))
     }
 </div>;
 
