@@ -1,9 +1,7 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter'
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
-import rehypeRaw from 'rehype-raw'
+import rehypeRaw from 'rehype-raw';
+import {getFileContent, getFileNames} from "../../lib/file";
 
 const Post = ({content, meta: {tags}}) => <div>
     <>{
@@ -16,26 +14,25 @@ const Post = ({content, meta: {tags}}) => <div>
 
 export const getStaticPaths = async () => {
 
-    const files = fs.readdirSync('posts');
+    const paths = getFileNames('posts').map(name => ({
+        params: {
+            id: name
+        }
+    }));
 
     return {
-        paths:  files.map(name => ({
-            params: {
-                id: name.replace(".md", "")
-            }
-        })),
+        paths,
         fallback: false
     }
 };
 
 export const getStaticProps = async ({params: {id}}) => {
 
-    const file = fs.readFileSync(path.join('posts',id + '.md')).toString();
-    let content = matter(file);
+    let {content, data} = getFileContent('posts',id)
     return {
         props: {
-            content: content.content,
-            meta: content.data
+            content: content,
+            meta: data
         }
     }
 
