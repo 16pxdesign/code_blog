@@ -6,9 +6,9 @@ const nextConfig = {
     path: "",
   },
   //basePath: "/code_blog",
-  basePath: "/",
+  basePath: "",
   //assetPrefix: "/code_blog",
-  assetPrefix: "/",
+  assetPrefix: "",
 }
 
 module.exports = nextConfig
