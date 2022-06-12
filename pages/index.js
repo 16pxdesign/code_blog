@@ -15,8 +15,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Link href={'/post/html'}><a>/post/html</a></Link>
-        <Link href={'/tags/car'}><a>/tags/car</a></Link>
+       {/* <Link href={'/post/html'}><a>/post/html</a></Link>
+        <Link href={'/tags/car'}><a>/tags/car</a></Link>*/}
 
       </main>
 
